@@ -1,0 +1,409 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.banner-container {
+    width: 500px;
+    height: 1000px;
+    overflow: hidden;
+    position: relative;
+    background: #932122;
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/background.jpg') center center;
+    background-size: cover;
+    opacity: 1;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    z-index: 2;
+    opacity: 0;
+    animation: logoReveal 1s ease-out 0.7s forwards;
+}
+
+
+.claim {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    z-index: 5;
+    opacity: 0;
+    animation: claimReveal 1s ease-out 0.7s forwards,
+        claimFadeOut 1s ease 12s forwards;
+}
+
+
+.burger {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-65%) translateY(110px) scale(1.3);
+    z-index: 2;
+    opacity: 0;
+    animation: burgerAnimation 1s ease 1s forwards;
+}
+
+.text-1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0%;
+    overflow: hidden;
+    opacity: 1;
+    animation: text-1-RevealAndFade 3.5s ease 1.9s forwards;
+}
+
+.text-2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: 0;
+    animation: text-2-RevealAndFade 3.1s ease 1.8s forwards;
+}
+
+.mcex-container {
+    position: relative;
+    top: 80px;
+    left: 0;
+    opacity: 0;
+    transform: rotate(0deg) scale(0.1);
+    animation: mcexSpinRevealFade 1s ease 4.5s forwards;
+}
+
+.x-icon {
+    position: absolute;
+    top: -29px;
+    left: 27%;
+    z-index: 1;
+}
+
+.mce-treme {
+    opacity: 0;
+    transform: scale(0.3, 100%);
+    animation: mceTremeSkewScale 0.5s ease 5.1s forwards;
+}
+
+.stroerer {
+    opacity: 0;
+    position: absolute;
+    top: 232px;
+    left: 30px;
+    z-index: 2;
+    animation: stroererScale 0.5s ease 6.5s forwards;
+}
+
+
+.droplet-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.droplet {
+    position: absolute;
+    border-radius: 50%;
+    background: #932122;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+}
+
+.droplet-1 {
+    width: 100%;
+    height: 42%;
+    animation: dropletWave1 1s ease 7.6s forwards;
+    z-index: 1;
+    opacity: 0;
+}
+
+.droplet-2 {
+    width: 100%;
+    height: 42%;
+    animation: dropletWave2 1s ease 7.9s forwards;
+    z-index: 1;
+    opacity: 1;
+}
+
+.droplet-3 {
+    width: 30%;
+    height: 15%;
+    animation: dropletWave3 1s ease 7.9s forwards;
+    z-index: 2;
+    background-color: transparent;
+    opacity: 0;
+    outline: 8vw solid #932122;
+}
+
+.droplet-4 {
+    width: 80%;
+    height: 40%;
+    animation: dropletWave4 1s ease 8.1s forwards;
+    z-index: 2;
+    opacity: 0;
+}
+
+.main-mcLogo {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 5;
+    overflow: hidden;
+    height: 0%;
+    animation: mainLogoReveal 4s ease 9s forwards;
+}
+
+.last-mc-title {
+    position: absolute;
+    top: 38%;
+    left: -5%;
+    z-index: 5;
+    animation: lastTitleReveal 3s ease 10s forwards;
+    opacity: 0;
+    transform: scale(0.8) rotate(4.5deg);
+}
+
+/* ========================================
+   KEYFRAMES - Animation Definitions
+   ======================================== */
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logoReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes claimReveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes burgerAnimation {
+    0% {
+        transform: translateX(-65%) translateY(90px) scale(1.3);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(-558px) translateY(90px) scale(1.3);
+        opacity: 1;
+    }
+}
+
+@keyframes text-1-RevealAndFade {
+    0% {
+        width: 13%;
+        opacity: 1;
+    }
+
+    25% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes text-2-RevealAndFade {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes mcexSpinRevealFade {
+    from {
+        opacity: 0;
+        transform: rotate(0deg) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes mceTremeSkewScale {
+    from {
+        opacity: 0.8;
+        transform: scale(0.3, 100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes stroererScale {
+    from {
+        opacity: 1;
+        transform: scale(0.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes dropletWave1 {
+    from {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+
+@keyframes dropletWave2 {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2.6);
+    }
+}
+
+@keyframes dropletWave3 {
+    from {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    to {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(3);
+    }
+}
+
+@keyframes dropletWave4 {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.2);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(2.8);
+    }
+}
+
+@keyframes mainLogoReveal {
+    0% {
+        height: 0%;
+        opacity: 1;
+    }
+
+    80% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes lastTitleReveal {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes claimFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
