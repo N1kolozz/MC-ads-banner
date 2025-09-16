@@ -4,25 +4,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const animationDuration = 13000; // 13 seconds total animation duration
 
     // Function to restart all animations cleanly
-    function restartAnimations() {
-        // Get all animated elements
-        const animatedElements = bannerContainer.querySelectorAll('.background, .logo, .claim, .burger, .text-1, .text-2, .mcex-container, .mce-treme, .stroerer, .droplet, .main-mcLogo, .last-mc-title');
 
-        // Reset all elements to their initial state
-        animatedElements.forEach(element => {
-            // Remove all animations
-            element.style.animation = 'none';
-        });
-
+    //Toggle animation class on container
+    function restartAnimationsWithClass() {
+        // Remove animation class to stop all animations
+        bannerContainer.classList.remove('animate');
+        
         // Force reflow
         bannerContainer.offsetHeight;
-
-        // Restore original CSS animations by removing inline styles
-        animatedElements.forEach(element => {
-            element.style.animation = '';
-        });
+        
+        // Add animation class back to restart all animations
+        bannerContainer.classList.add('animate');
     }
 
     // Set up infinite loop using setInterval
-    setInterval(restartAnimations, animationDuration);
+    setInterval(restartAnimationsWithClass, animationDuration);
 });

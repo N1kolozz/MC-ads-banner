@@ -32,6 +32,8 @@ body {
     background: url('img/background.jpg') center center;
     background-size: cover;
     opacity: 1;
+}
+.banner-container.animate .background {
     animation: fadeIn 1s ease forwards;
 }
 
@@ -43,6 +45,9 @@ body {
     transform: translateX(-50%) translateY(-50px);
     z-index: 2;
     opacity: 0;
+}
+
+.banner-container.animate .logo {
     animation: logoReveal 1s ease-out 0.7s forwards;
 }
 
@@ -54,6 +59,9 @@ body {
     transform: translateX(-50%) translateY(-50px);
     z-index: 5;
     opacity: 0;
+}
+
+.banner-container.animate .claim {
     animation: claimReveal 1s ease-out 0.7s forwards,
         claimFadeOut 1s ease 12s forwards;
 }
@@ -66,6 +74,9 @@ body {
     transform: translateX(-65%) translateY(110px) scale(1.3);
     z-index: 2;
     opacity: 0;
+}
+
+.banner-container.animate .burger {
     animation: burgerAnimation 1s ease 1s forwards;
 }
 
@@ -76,6 +87,9 @@ body {
     width: 0%;
     overflow: hidden;
     opacity: 1;
+}
+
+.banner-container.animate .text-1 {
     animation: text-1-RevealAndFade 3.5s ease 1.9s forwards;
 }
 
@@ -84,6 +98,9 @@ body {
     bottom: 0px;
     left: 0;
     opacity: 0;
+}
+
+.banner-container.animate .text-2 {
     animation: text-2-RevealAndFade 3.1s ease 1.8s forwards;
 }
 
@@ -93,6 +110,9 @@ body {
     left: 0;
     opacity: 0;
     transform: rotate(0deg) scale(0.1);
+}
+
+.banner-container.animate .mcex-container {
     animation: mcexSpinRevealFade 1s ease 4.5s forwards;
 }
 
@@ -106,6 +126,9 @@ body {
 .mce-treme {
     opacity: 0;
     transform: scale(0.3, 100%);
+}
+
+.banner-container.animate .mce-treme {
     animation: mceTremeSkewScale 0.5s ease 5.1s forwards;
 }
 
@@ -115,8 +138,12 @@ body {
     top: 232px;
     left: 30px;
     z-index: 2;
+}
+
+.banner-container.animate .stroerer {
     animation: stroererScale 0.5s ease 6.5s forwards;
 }
+
 
 
 .droplet-container {
@@ -141,35 +168,47 @@ body {
 .droplet-1 {
     width: 100%;
     height: 42%;
-    animation: dropletWave1 1s ease 7.6s forwards;
     z-index: 1;
     opacity: 0;
+}
+
+.banner-container.animate .droplet-1 {
+    animation: dropletWave1 1s ease 7.6s forwards;
 }
 
 .droplet-2 {
     width: 100%;
     height: 42%;
-    animation: dropletWave2 1s ease 7.9s forwards;
     z-index: 1;
     opacity: 1;
+}
+
+.banner-container.animate .droplet-2 {
+    animation: dropletWave2 1s ease 7.9s forwards;
 }
 
 .droplet-3 {
     width: 30%;
     height: 15%;
-    animation: dropletWave3 1s ease 7.9s forwards;
     z-index: 2;
     background-color: transparent;
     opacity: 0;
     outline: 8vw solid #932122;
 }
 
+.banner-container.animate .droplet-3 {
+    animation: dropletWave3 1s ease 7.9s forwards;
+}
+
 .droplet-4 {
     width: 80%;
     height: 40%;
-    animation: dropletWave4 1s ease 8.1s forwards;
     z-index: 2;
     opacity: 0;
+}
+
+.banner-container.animate .droplet-4 {
+    animation: dropletWave4 1s ease 8.1s forwards;
 }
 
 .main-mcLogo {
@@ -179,6 +218,9 @@ body {
     z-index: 5;
     overflow: hidden;
     height: 0%;
+}
+
+.banner-container.animate .main-mcLogo {
     animation: mainLogoReveal 4s ease 9s forwards;
 }
 
@@ -187,9 +229,12 @@ body {
     top: 38%;
     left: -5%;
     z-index: 5;
-    animation: lastTitleReveal 3s ease 10s forwards;
     opacity: 0;
     transform: scale(0.8) rotate(4.5deg);
+}
+
+.banner-container.animate .last-mc-title {
+    animation: lastTitleReveal 3s ease 10s forwards;
 }
 
 /* ========================================
